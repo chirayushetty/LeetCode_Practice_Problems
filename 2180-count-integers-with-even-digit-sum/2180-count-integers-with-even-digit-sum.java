@@ -8,7 +8,7 @@ class Solution
                 count++;
         return count;
     }
-    private boolean sumDig(int n)
+    static boolean sumDig(int n)
     {
         int sum = 0;
         while(n > 0)
