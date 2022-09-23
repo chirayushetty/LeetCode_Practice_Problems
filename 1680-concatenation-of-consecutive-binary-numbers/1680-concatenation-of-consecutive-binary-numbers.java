@@ -6,32 +6,32 @@ class Solution {
     public int concatenatedBinary(int n) {
 // Math :   
         
-//         long res = 0;
-//         int mod = 1_000_000_007;
-        
-//         for(int i=1;i<=n;i++){
-//             String binaryString = Integer.toBinaryString(i);
-//             res = (res << binaryString.length()) % mod;
-//             res = (res + i) % mod;
-//         }
-        
-//         return (int) res;
-        
-// Bit Manipulation:
-        
         long res = 0;
         int mod = 1_000_000_007;
-        int size = 0;
         
         for(int i=1;i<=n;i++){
-            if((i &(i-1))==0){
-                size++;
-            }
-            
-            res = ((res << size) + i) % mod;
+            String binaryString = Integer.toBinaryString(i);
+            res = ((res << binaryString.length()) + i) % mod;
+            //res = (res + i) % mod;
         }
         
         return (int) res;
+        
+// Bit Manipulation:
+        
+//         long res = 0;
+//         int mod = 1_000_000_007;
+//         int size = 0;
+        
+//         for(int i=1;i<=n;i++){
+//             if((i &(i-1))==0){
+//                 size++;
+//             }
+            
+//             res = ((res << size) + i) % mod;
+//         }
+        
+//         return (int) res;
         
     }
 }
