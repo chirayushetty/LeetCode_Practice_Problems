@@ -1,7 +1,7 @@
 class Solution {
     public int findLength(int[] nums1, int[] nums2) {
         int m = nums1.length;
-       int n = nums2.length;
+        int n = nums2.length;
         int maxCount=0;
         for(int i=-n+1;i<m;i++)
         {
