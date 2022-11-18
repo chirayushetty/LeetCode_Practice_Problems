@@ -22,7 +22,7 @@ class Solution {
         
         StringBuilder sb = new StringBuilder();
         
-        while(!char_st.isEmpty()){
+        while(char_st.size()>0){
             sb.append(char_st.pop());
         }
         
